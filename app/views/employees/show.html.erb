@@ -1,0 +1,21 @@
+<div class="container text-center ">
+  <div class="row justify-content-center mt-5">
+    <div class="col-lg-4 ">
+      <div class="card p-5" style="width:400px; height:auto;background-color:#dadada;">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%=@employee.name%>
+          </h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">
+            <%=@employee.personal_email%>
+          </h6>
+          <p class="card-text">
+            <%=@employee.address%>
+          </p>
+          <%=link_to "Back" ,"/employees", class:"card-link btn btn-primary" %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

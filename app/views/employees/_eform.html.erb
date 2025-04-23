@@ -1,0 +1,72 @@
+
+<%=form_with model:employees do |form|%>
+<div class="row">
+    <div class="col-lg-4">
+        <div class="form-group">
+            <%= form.label:first_name,class:"mb-2"%>
+            <%= form.text_field:first_name ,class:"form-control form-control-lg"%>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="form-group">
+            <%= form.label:middle_name,class:"mb-2"%>
+            <%= form.text_field:middle_name ,class:"form-control form-control-lg"%>
+        </div>
+    </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+            <%= form.label:last_name,class:"mb-2"%>
+            <%= form.text_field:last_name ,class:"form-control form-control-lg"%>
+        </div>
+    </div>
+</div>
+<div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+            <%= form.label:personal_email,class:"mb-2"%>
+            <%= form.email_field:personal_email ,class:"form-control form-control-lg"%>
+        </div>
+       
+      </div>
+     
+        <div class="col-lg-6">
+        <div class="form-group">
+            <%= form.label:address_line_1,class:"mb-2"%>
+            <%= form.text_field:address_line_1 ,class:"form-control form-control-lg"%>
+        </div>
+      </div>
+
+        <div class="col-lg-3">
+        <div class="form-group">
+             <%= form.label:city,class:"mb-2" %>
+            <%= form.text_field:city ,class:"form-control form-control-lg"%>
+        </div>
+      </div>
+
+        <div class="col-lg-3">
+        <div class="form-group">
+            <%= form.label:state,class:"mb-2"%>
+            <%= form.text_field:state ,class:"form-control form-control-lg"%>
+        </div>
+      </div>
+        <div class="col-lg-3">
+        <div class="form-group">
+            <%= form.label:country,class:"mb-2"%>
+            <%= form.text_field:country ,class:"form-control form-control-lg"%>
+        </div>
+      </div>
+         <div class="col-lg-3">
+        <div class="form-group">
+            <%= form.label:pincode,class:"mb-2"%>
+            <%= form.text_field:pincode ,class:"form-control form-control-lg"%>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-lg-4">
+        <%= form.submit  class:'btn  btn-success btn-lg'%>
+      
+        <%= link_to 'Back To List' ,"/employees" , class:'btn btn-outline-primary btn-lg'%>
+        </div>
+      </div>
+</div>
+<%end%>

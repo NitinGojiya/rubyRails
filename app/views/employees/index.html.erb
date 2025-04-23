@@ -1,0 +1,65 @@
+<div class="card mt-5 mb-5">
+    <div class="card-body">
+        <h2 class="text-center">List of Employyes</h2>
+    </div>
+</div>
+<div class="pt-1 pb-5">
+    <%= link_to "New Employee" ,"employees/new" ,class:"btn btn-success btn-lg"%>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th> Name</th>
+
+            <th>email</th>
+            <th>address</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <% @employees.each do |employee|%>
+
+        <tbody>
+            <tr>
+                <th>
+                    <%=employee.name%>
+                </th>
+
+                <th>
+                    <%=employee.personal_email%>
+                </th>
+                <th>
+                    <%=employee.address%>
+                </th>
+                <th>
+                    <!-- Example single danger button -->
+                    <div class="btn-group text-capitalize">
+                        <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Action
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <%= link_to 'Delete' , employee_path(employee.id), method: :delete, data: {
+                                    confirm: 'Are you sure?' }, class: "dropdown-item" %>
+                            </li>
+                            <li>
+                                <%= link_to 'show' , employee_path(employee.id), method: :get,
+                                    class: "dropdown-item" %>
+                            </li>
+                            <li>
+                                <%= link_to 'update' , edit_employee_path(employee.id), method: :get,
+                                    class: "dropdown-item" %>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </th>
+
+
+            </tr>
+        </tbody>
+
+        <%end%>
+</table>
